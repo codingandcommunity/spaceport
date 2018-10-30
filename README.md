@@ -42,6 +42,36 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+## Things You Probably Shouldn't Do
+
+### Pusing directly to master
+
+![push force meme](imgs/git-push-origin-master-f.jpg)
+
+This is how to get fired from an internship in a single command: `git push origin master -f`.
+
+This is one of the only ways in Git that you can overwrite and/or destroy other people's work.
+
+The correct thing to do is to create a branch, work on that branch, then merge that branch via a pull request.
+
+### Not writing unit tests
+
+![unit test meme](imgs/unit-test-memes.png)
+
+If you don't write automated tests, nobody else will know if your code works or not.
+
+### Not writing documentation
+
+![documentation meme](imgs/documentation-meme.jpg)
+
+If you don't document your code, nobody will know what you were thinking. There's also a decent change you will forget if you leave the code alone for a few weeks.
+
+### Get sucked into the enterprise development world
+
+![enterprise dev call for help](imgs/yeah-0programin-java-ust-helpme-pleaselkvebeenstuckin-deteriorating-callfor-help-polymorphic-programming-31345876.png)
+
+[Checkout Steve Ballmer of Microsoft talk about developers](https://www.youtube.com/watch?v=Vhh_GeBPOhs).
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
