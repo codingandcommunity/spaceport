@@ -77,3 +77,9 @@ If you don't document your code, nobody will know what you were thinking. There'
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Past Contributors ###
+
+Add your name here if you're committing changes to this repository.
+
+- [Jake Billings](https://jakebillings.com)
