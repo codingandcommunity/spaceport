@@ -1,6 +1,8 @@
 Spaceport
 =========
 
+This repository is part of the [RCOS Open Source Curriculum Project](https://github.com/codingandcommunity/rcos-open-source-curriculum-project). View the main repository for system-level documentation. This repository contains only the frontend website. Students can view project details from this frontend website.
+
 ![github meme](imgs/github-meme.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
