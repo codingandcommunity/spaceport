@@ -13,7 +13,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy:create": "aws s3 mb s3://spaceport.codingandcommunity.org --profile codingandcommunity",
-    "deploy:update": "npm run build && aws s3 sync build/ s3://spaceport-dev.codingandcommunity.org --profile codingandcommunity && aws cloudfront create-invalidation --distribution-id E1RP1IYNDE41P8",
+    "deploy:update": "npm run build && aws s3 sync build/ s3://spaceport-dev.codingandcommunity.org --profile codingandcommunity && aws cloudfront create-invalidation --profile codingandcommunity --distribution-id E1RP1IYNDE41P8 --paths \"/*\"",
     "deploy": "yarn deploy:update"
   },
   "eslintConfig": {
