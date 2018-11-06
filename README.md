@@ -7,11 +7,27 @@ This repository is part of the [RCOS Open Source Curriculum Project](https://git
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Technologies
+
+ - Spaceport uses the Yarn package manager
+ - ReactJS
+
+## Getting Started
+
+1. Ensure Node is installed by running `npm --version`. You should see a number like `6.4.1`. If not, install the latest LTS version of NodeJS.
+1. Ensure Yarn is installed by running `yarn --version`. You should see a number like `1.7.0`. If not, install it using the command `npm i -g yarn`.
+1. Clone this repository into whatever folder you want using `git clone [url]`. I highly recommend using ssh to work with GitHub, but https will work fine if you're just starting out.
+1. Move into the project directory using `cd spaceport`.
+1. Install dependencies using `yarn install`
+1. Start the development server using `yarn start`
+1. Admire your work by viewing http://localhost:3000 in your browser.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `yarn start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -19,12 +35,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm test`
+### `yarn test`
 
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### `yarn run build`
 
 Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -34,7 +50,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### `yarn run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
