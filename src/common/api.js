@@ -6,7 +6,7 @@
  *
  * @type {string}
  */
-const API_BASE_URL = 'https://qdljuxtz6h.execute-api.us-east-1.amazonaws.com/prod';
+const API_BASE_URL = 'https://d3852d07prc7x3.cloudfront.net';
 
 
 /**
