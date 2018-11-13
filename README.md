@@ -102,3 +102,4 @@ Add your name here if you're committing changes to this repository.
 
 - [Jake Billings](https://jakebillings.com)
 - [Saketh Dargula](https://github.com/sak6lab)
+- [Peter Shin](http://github.com/pjs1221)
