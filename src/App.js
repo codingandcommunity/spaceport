@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
-const Home = () => ( <h2>Home</h2> );
-const Projects= () => ( <h2>Projects</h2> );
-const Project= () => ( <h2>Project X</h2> );
-const Curriculums= () => ( <h2>Curriculums</h2> );
-const Curriculum= () => ( <h2>Curriculum</h2> );
-const Article = () => ( <h2>Article</h2> );
+import Home from './screens/Home.js';
+import Projects from './screens/Projects.js';
+import Project from './screens/Project.js';
+import Curriculums from './screens/Curriculums.js';
+import Curriculum from './screens/Curriculum.js';
+import Article from './screens/Article.js';
+
 const NotFound = () => ( <h2>Not Found</h2> );
 
 class App extends Component {
