@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
 import PageFrame from '../components/PageFrame';
-
+import Jumbotron from '../components/Jumbotron';
 class Curriculums extends Component {
 
     render() {
         return (
             <PageFrame>
-                <h2>Curriculums</h2>
+                <Jumbotron></Jumbotron>
             </PageFrame>
-        );    
+        );
     }
 }
 
