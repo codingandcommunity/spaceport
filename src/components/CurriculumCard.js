@@ -10,6 +10,12 @@ class CurriculumCard extends Component  {
   render() {
     const id = this.props.id;
     const curriculum = this.props.curriculum;
+    const tags = [];
+
+    curriculum.tags.forEach( (tag) => {
+      tags.push("#"+tag+" ");
+    });
+
     return (
       <div className="card-container">
         <div className="card">
@@ -22,7 +28,7 @@ class CurriculumCard extends Component  {
             <span> Not started </span>
           </div>
           <div className="tags">
-            { curriculum.tags }
+            { tags }
           </div>
         </div>
       </div>
