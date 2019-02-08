@@ -1,0 +1,11 @@
+{
+"title": "React Router",
+"image": "http://example.com/image.jpg",
+"genre": "search engine optimization",
+"keywords": "",
+"url": "http://www.example.com",
+"dateCreated": "2019-01-28",
+"dateModified": "2019-01-28",
+"description": "We love to do stuff to help people and stuff",
+"articleBody": "<p>React Router v4 is a pure React rewrite of the popular React package. Previous versions of React Router used configuration disguised as pseudo-components and could be difficult to understand. With v4, everything is “just components”.</p> <p>In this tutorial, we will be building a single-page application website for a local sports team. We will go over all of the basics needed to get our site up and routing. This will include:</p> <ol> <li>Choosing our router</li> <li>Creating routes</li> <li>Navigating between routes using links</li> </ol> <p>If you are curious about how single-page applications actually work, you can check out my <a href=\"/entry/how-single-page-applications-work/\">How Single-Page Applications Work</a> blog entry.</p>"
+}
