@@ -8,20 +8,21 @@ import './CurriculumCard.css';
 class CurriculumCard extends Component  {
 
   render() {
+    const id = this.props.id;
+    const curriculum = this.props.curriculum;
     return (
       <div className="card-container">
-
         <div className="card">
           <div className="card-header">
           </div>
           <div className="card-body">
-            <span> Curriculum Title </span>
+            <span> { curriculum.title } </span>
           </div>
           <div className="card-footer">
             <span> Not started </span>
           </div>
           <div className="tags">
-            #python #new
+            { curriculum.tags }
           </div>
         </div>
       </div>
