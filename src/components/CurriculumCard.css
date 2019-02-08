@@ -1,0 +1,35 @@
+.card {
+  background: #C4C4C4;
+  border-radius: 0px;
+  border: none;
+  width: 300px;
+  margin: 20px;
+  float: left;
+}
+.card-container {
+  display: block;
+}
+.card-header {
+  height: 3em;
+  margin-top: 0px;
+  margin-bottom: auto;
+  background: #E5E5E5;
+}
+.card-body {
+  font-size: 2em;
+  min-height: 4em;
+  max-height: 8em;
+  overflow: hidden;
+}
+.card-footer {
+  height: 3em;
+  text-align: left;
+  margin-top: auto;
+  margin-bottom: 0px;
+  background: #E5E5E5;
+}
+.tags {
+  text-align: left;
+  background: #fff;
+  color: #00B3FE;
+}

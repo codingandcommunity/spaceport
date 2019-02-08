@@ -1,12 +1,14 @@
 .jumbotron {
-  /* position: absolute; */
   width: 100%;
   height: 300px;
   margin: 0px;
   background: #00B3FE;
   color: white;
+
 }
-.jumbotron h1 {
+.jumbotron span {
   vertical-align: middle;
   line-height: 150px;
+  font-size: 40px;
+  overflow: scroll;
 }
