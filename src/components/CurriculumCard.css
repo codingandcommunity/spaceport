@@ -2,7 +2,7 @@
   background: #C4C4C4;
   border-radius: 0px;
   border: none;
-  width: 300px;
+  width: 325px;
   margin: 20px;
   float: left;
 }
@@ -14,10 +14,11 @@
   margin-top: 0px;
   margin-bottom: auto;
   background: #E5E5E5;
+  max-height: 3em;
 }
 .card-body {
   font-size: 2em;
-  min-height: 4em;
+  min-height: 5em;
   max-height: 8em;
   overflow: hidden;
 }
@@ -27,9 +28,13 @@
   margin-top: auto;
   margin-bottom: 0px;
   background: #E5E5E5;
+  max-height: 3em;
 }
 .tags {
   text-align: left;
   background: #fff;
   color: #00B3FE;
+}
+.curriculum-title {
+  font-size: 1em;
 }

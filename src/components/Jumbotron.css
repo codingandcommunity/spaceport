@@ -4,11 +4,10 @@
   margin: 0px;
   background: #00B3FE;
   color: white;
-
 }
 .jumbotron span {
   vertical-align: middle;
-  line-height: 150px;
-  font-size: 40px;
+  line-height: 70px;
+  font-size: 70px;
   overflow: scroll;
 }

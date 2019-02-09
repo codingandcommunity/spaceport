@@ -13,6 +13,7 @@ class CurriculumCardContainer extends Component {
           cards.push(
             <CurriculumCard
               id={curriculum.id}
+              key={curriculum.id}
               curriculum={curriculum} />
           );
       });
