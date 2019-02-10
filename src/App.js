@@ -9,7 +9,6 @@ import Curriculums from './screens/Curriculums.js';
 import Curriculum from './screens/Curriculum.js';
 import Article from './screens/Article.js';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 

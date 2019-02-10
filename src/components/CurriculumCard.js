@@ -24,8 +24,6 @@ class CurriculumCard extends Component  {
         }}>
         <div className="card-container">
           <div className="card">
-            <div className="card-header">
-            </div>
             <div className="card-body">
               <span className="curriculum-title"> { curriculum.name } </span>
             </div>
