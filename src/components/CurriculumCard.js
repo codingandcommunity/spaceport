@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+  import { BrowserRouter as Router, Link } from "react-router-dom";
 import './CurriculumCard.css';
 
 /*
@@ -11,30 +11,34 @@ class CurriculumCard extends Component  {
     const id = this.props.id;
     const curriculum = this.props.curriculum;
     const tags = [];
-    console.log(this);
 
-    curriculum.tags.forEach( (tag) => {
-      tags.push("#"+tag+" ");
-    });
+    if (curriculum.language) {
+      curriculum.language.forEach(language => {
+        tags.push("#"+language+" ");
+      });
+    }
+    // TODO: add GET request for getting a repo's topics
+    // TODO: "html_url"
 
     return (
-      <a href={'/curriculums/'+ curriculum.id}>
+      <Link to={{
+          pathname: `/curriculums/:${curriculum.id}`,
+        }}>
         <div className="card-container">
           <div className="card">
             <div className="card-header">
             </div>
             <div className="card-body">
-              <span className="curriculum-title"> { curriculum.title } </span>
+              <span className="curriculum-title"> { curriculum.name } </span>
             </div>
             <div className="card-footer">
-              <span> Not started </span>
             </div>
             <div className="tags">
               { tags }
             </div>
           </div>
         </div>
-      </a>
+      </Link>
     );
   }
 }
