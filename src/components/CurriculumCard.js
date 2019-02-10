@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-  import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import './CurriculumCard.css';
 
 /*
@@ -17,11 +17,10 @@ class CurriculumCard extends Component  {
       });
     }
     // TODO: add GET request for getting a repo's topics
-    // TODO: "html_url"
 
     return (
       <Link to={{
-          pathname: `/curriculums/:${curriculum.id}`,
+          pathname: `/curriculums/${curriculum.id}`,
         }}>
         <div className="card-container">
           <div className="card">
