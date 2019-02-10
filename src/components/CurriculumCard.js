@@ -8,9 +8,8 @@ import './CurriculumCard.css';
 class CurriculumCard extends Component  {
 
   render() {
-    const id = this.props.id;
     const curriculum = this.props.curriculum;
-    const tags = [];
+    const tags = ["#test ","#beginner "];
 
     if (curriculum.language) {
       curriculum.language.forEach(language => {
