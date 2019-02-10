@@ -8,9 +8,10 @@ import './Jumbotron.css';
 class Jumbotron extends Component  {
 
   render() {
+    const text = this.props.text;
     return (
       <div className="jumbotron">
-        <span> <strong>Select from one of our many curriculm to get started!</strong></span>
+        <span> <strong> { text } </strong></span>
       </div>
     );
   }
