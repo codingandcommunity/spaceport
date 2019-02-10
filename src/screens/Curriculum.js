@@ -4,12 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 import PageFrame from '../components/PageFrame';
+import CurriculumInfo from '../components/CurriculumInfo';
 
 class Curriculum extends Component {
-  // TODO: add GET request for single repo
-  // TODO: add "html_url" repo link
-    // <Link to='${curriculum.html_url}'><FontAwesomeIcon icon={['fab', 'github']} /></Link>
-  // TODO: add icon to github repo link
 
   constructor(props) {
     super(props);
@@ -18,24 +15,20 @@ class Curriculum extends Component {
     }
   }
 
-  // TODO: add GET request for single repo
   componentDidMount() {
-    axios.get(`https://api.github.com/orgs/spaceport-curriculums/repos`, { headers: { Accept: 'application/vnd.github.mercy-preview+json' } })
+    const { id } = this.props.match.params;
+    axios.get(`https://api.github.com/repositories/${id}`, { headers: { Accept: 'application/vnd.github.mercy-preview+json' } })
     .then(res => {
-      const curriculums = res.data;
-      this.setState({ curriculums });
+      const curriculum = res.data;
+      this.setState({ curriculum });
     })
   }
 
   render() {
-      const { id } = this.props.match.params;
+      const { curriculum } = this.state;
         return (
             <PageFrame>
-                <h2>Curriculum: {id}</h2>
-                  <FontAwesomeIcon icon={['fas', 'arrow-right']} size="2x"/>
-                <div>
-                  <Link to='\'><FontAwesomeIcon icon={['fab', 'github']} size="6x"/></Link>
-                </div>
+                {this.state.curriculum ? <CurriculumInfo curriculum={ curriculum } /> : <FontAwesomeIcon icon={['fas','spinner']} spin size="6x" /> }
             </PageFrame>
         );
     }

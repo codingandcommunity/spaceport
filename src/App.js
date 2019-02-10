@@ -9,11 +9,11 @@ import Curriculums from './screens/Curriculums.js';
 import Curriculum from './screens/Curriculum.js';
 import Article from './screens/Article.js';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const NotFound = () => ( <h2>Not Found</h2> );
-library.add(faArrowRight, faGithub);
+library.add(faSpinner, faGithub);
 
 class App extends Component {
   render() {

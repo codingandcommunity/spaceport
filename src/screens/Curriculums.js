@@ -23,7 +23,7 @@ class Curriculums extends Component {
     render() {
         return (
             <PageFrame>
-                <Jumbotron></Jumbotron>
+                <Jumbotron text="Select from one of our many curriculm to get started!"></Jumbotron>
                 <CurriculumCardContainer curriculums={this.state.curriculums}></CurriculumCardContainer>
             </PageFrame>
         );
