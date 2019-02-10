@@ -25,13 +25,12 @@ class Curriculum extends Component {
   }
 
   render() {
-      const { curriculum } = this.state;
-        return (
-            <PageFrame>
-                {this.state.curriculum ? <CurriculumInfo curriculum={ curriculum } /> : <FontAwesomeIcon icon={['fas','spinner']} spin size="6x" /> }
-            </PageFrame>
-        );
-    }
+    return (
+        <PageFrame>
+            {this.state.curriculum ? <CurriculumInfo curriculum={ this.state.curriculum } /> : <FontAwesomeIcon icon={['fas','spinner']} spin size="6x" /> }
+        </PageFrame>
+    );
+  }
 }
 
 export default Curriculum;
