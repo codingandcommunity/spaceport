@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { BrowserRouter as Router, Link } from "react-router-dom";
-
 import PageFrame from '../components/PageFrame';
 import CurriculumInfo from '../components/CurriculumInfo';
 
