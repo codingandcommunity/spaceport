@@ -24,7 +24,7 @@ class Article extends Component {
     }
 
     componentDidMount() {
-        fetch('/__mocks/articles.json')
+        fetch('/__mocks/article.json')
             .then(res => {
                 return res.json();
             })
