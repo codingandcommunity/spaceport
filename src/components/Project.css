@@ -1,0 +1,22 @@
+.jumbotron {
+	margin-bottom: 4em;
+	border-style:solid;
+	border-color: #FF6922;
+	background-size: contain;
+	padding-top: 20%;
+	padding-bottom: 20%;
+
+}
+
+h2{
+	text-align: center;
+	color: #18B1FF;
+}
+
+p{
+	text-align: justify;
+}
+
+h4{
+	color: #FF6922;
+}
