@@ -7,7 +7,7 @@ import Projects from './screens/Projects.js';
 import Project from './screens/Project.js';
 import Curriculums from './screens/Curriculums.js';
 import Curriculum from './screens/Curriculum.js';
-import Article from './screens/Article.js';
+import Article from './screens/Article/Article.js';
 
 const NotFound = () => ( <h2>Not Found</h2> );
 
