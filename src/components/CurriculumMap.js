@@ -1,47 +1,25 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import './CurriculumMap.css';
 
+/*
+ * A stylized list of projects and articles associated with a Curriculum
+ */
 class CurriculumMap extends Component {
 
   constructor(props) {
     super(props);
-    this.state =
-    {
-      articles: [
-        {
-            title: 'Setting Up Your Environment',
-            link: 'https://cdn-images-1.medium.com/fit/t/1600/672/0*n-2bW82Z6m6U2bij.jpeg'
-        },
-        {
-            title: 'How to Code',
-            link: 'https://cdn-images-1.medium.com/fit/t/1600/672/0*n-2bW82Z6m6U2bij.jpeg'
-        }
-      ],
-      projects: [
-        {
-            title: 'Hello World',
-            link: 'https://cdn-images-1.medium.com/fit/t/1600/672/0*n-2bW82Z6m6U2bij.jpeg'
-        },
-        {
-            title: 'Python Blackjack',
-            link: 'https://cdn-images-1.medium.com/fit/t/1600/672/0*n-2bW82Z6m6U2bij.jpeg'
-        },
-        {
-            title: 'Python Calculator',
-            link: 'https://cdn-images-1.medium.com/fit/t/1600/672/0*n-2bW82Z6m6U2bij.jpeg'
-        }
-      ]
+    this.state = {
+      articles: this.props.articles,
+      projects: this.props.projects
     }
   }
 
   render() {
-    const { curriculum } = this.props;
     const info = [];
     this.state.articles.forEach((article) => {
-      // console.log(article);
       info.push(
-        <li>
+        <li key={article.title}>
           <Link to={{
               pathname: `${ article.link }`,
             }}>
@@ -52,7 +30,7 @@ class CurriculumMap extends Component {
     });
     this.state.projects.forEach((project) => {
       info.push(
-        <li>
+        <li key={project.title}>
           <Link to={{
               pathname: `${ project.link }`,
             }}>

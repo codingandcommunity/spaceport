@@ -1,0 +1,100 @@
+[
+    {
+      "id": "1",
+      "name": "test-curriculum",
+      "description": "This is a test. Get started!",
+      "respository":"https://github.com/codingandcommunity/test-curriculum",
+      "tags": ["test", "beginner"],
+      "articles": [
+        {
+            "id":"1",
+            "title": "Setting Up Your Environment",
+            "link": "https://cdn-images-1.medium.com/fit/t/1600/672/0*n-2bW82Z6m6U2bij.jpeg"
+        },
+        {
+            "id":"2",
+            "title": "How to Code",
+            "link": "https://cdn-images-1.medium.com/fit/t/1600/672/0*n-2bW82Z6m6U2bij.jpeg"
+        }
+      ],
+      "projects" : [
+        {
+            "id":"1",
+            "title": "Hello World",
+            "link": "https://cdn-images-1.medium.com/fit/t/1600/672/0*n-2bW82Z6m6U2bij.jpeg"
+        },
+        {
+            "id":"2",
+            "title": "Python Blackjack",
+            "link": "https://cdn-images-1.medium.com/fit/t/1600/672/0*n-2bW82Z6m6U2bij.jpeg"
+        },
+        {
+            "id":"3",
+            "title": "Python Calculator",
+            "link": "https://cdn-images-1.medium.com/fit/t/1600/672/0*n-2bW82Z6m6U2bij.jpeg"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "intermediate-curriculum",
+      "description": "This is an intermediate curriculum. Get started ASAP!",
+      "respository":"https://github.com/codingandcommunity/test-curriculum",
+      "tags": ["test", "intermediate"],
+      "articles": [
+        {
+            "id":"1",
+            "title": "Setting Up Your Environment, But its Intermediate",
+            "link": "https://cdn-images-1.medium.com/fit/t/1600/672/0*n-2bW82Z6m6U2bij.jpeg"
+        },
+        {
+            "id":"2",
+            "title": "How to Code, But its Intermediate",
+            "link": "https://cdn-images-1.medium.com/fit/t/1600/672/0*n-2bW82Z6m6U2bij.jpeg"
+        }
+      ],
+      "projects" : [
+        {
+            "id":"1",
+            "title": "Hello Intermediate Python",
+            "link": "https://cdn-images-1.medium.com/fit/t/1600/672/0*n-2bW82Z6m6U2bij.jpeg"
+        },
+        {
+            "id":"2",
+            "title": "Python Intermediate Exercise",
+            "link": "https://cdn-images-1.medium.com/fit/t/1600/672/0*n-2bW82Z6m6U2bij.jpeg"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "harder-curriculum",
+      "description": "This is an even harder curriculum. Tread carefully!",
+      "respository":"https://github.com/codingandcommunity/test-curriculum",
+      "tags": ["test", "hard"],
+      "articles": [
+        {
+            "id":"1",
+            "title": "Hard Start",
+            "link": "https://cdn-images-1.medium.com/fit/t/1600/672/0*n-2bW82Z6m6U2bij.jpeg"
+        },
+        {
+            "id":"2",
+            "title": "Coding Harder",
+            "link": "https://cdn-images-1.medium.com/fit/t/1600/672/0*n-2bW82Z6m6U2bij.jpeg"
+        }
+      ],
+      "projects" : [
+        {
+            "id":"1",
+            "title": "Harder Python Project",
+            "link": "https://cdn-images-1.medium.com/fit/t/1600/672/0*n-2bW82Z6m6U2bij.jpeg"
+        },
+        {
+            "id":"2",
+            "title": "You're On Your Own For This",
+            "link": "https://cdn-images-1.medium.com/fit/t/1600/672/0*n-2bW82Z6m6U2bij.jpeg"
+        }
+      ]
+    }
+]

@@ -13,11 +13,16 @@ class Curriculums extends Component {
     }
 
     componentDidMount() {
-      axios.get(`https://api.github.com/orgs/spaceport-curriculums/repos`, { headers: { Accept: 'application/vnd.github.mercy-preview+json' } })
-      .then(res => {
-        const curriculums = res.data;
-        this.setState({ curriculums });
-      })
+      // axios.get(`https://api.github.com/orgs/spaceport-curriculums/repos`, { headers: { Accept: 'application/vnd.github.mercy-preview+json' } })
+      // .then(res => {
+      //   const curriculums = res.data;
+      //   this.setState({ curriculums });
+      // })
+      axios.get('/__mocks/curriculums.json')
+        .then(res => {
+            const curriculums = res.data;
+            this.setState({ curriculums });
+        })
     }
 
     render() {

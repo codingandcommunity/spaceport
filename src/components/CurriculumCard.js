@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import './CurriculumCard.css';
 
 /*
@@ -9,14 +9,10 @@ class CurriculumCard extends Component  {
 
   render() {
     const curriculum = this.props.curriculum;
-    const tags = ["#test ","#beginner "];
-
-    if (curriculum.language) {
-      curriculum.language.forEach(language => {
-        tags.push("#"+language+" ");
-      });
-    }
-    // TODO: add GET request for getting a repo's topics
+    const tags = [];
+    curriculum.tags.forEach(tag => {
+      tags.push("#"+tag+" ");
+    });
 
     return (
       <Link to={{

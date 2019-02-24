@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CurriculumCard from '../components/CurriculumCard';
 
+/*
+ * Container for curriculum cards.
+ */
 class CurriculumCardContainer extends Component {
 
     render() {
@@ -14,6 +18,8 @@ class CurriculumCardContainer extends Component {
           );
       });
 
+      // TODO: add loading spinner to card container
+      // {{cards}.length > 0 ? {cards} : <FontAwesomeIcon icon={['fas','spinner']} spin size="6x" /> }
       return (
         <div>
           {cards}
