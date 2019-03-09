@@ -33,12 +33,21 @@ class Navbar extends Component {
                                 <Link className="nav-link" to={"/projects"}>Projects</Link>
                             </li>
                         </ul>
+
+                        <form className="form-inline">
+                          <div className="input-group">
+                            <div className="input-group-prepend">
+                              <span className="input-group-text bg-white"><i className="fa fa-search"></i></span>
+                            </div>
+                            <input type="search" placeholder="Search" className="form-control border-left-0"/>
+                          </div>
+                        </form>
                     </div>
+
                 </div>
             </nav>
         );
     }
 }
 
-export default Navbar; 
-
+export default Navbar;
