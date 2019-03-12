@@ -8,7 +8,6 @@ class ProjectCard extends Component{
 	render(){
 
 		const project = this.props.project;
-    	const tags = ["#plswork ","#thisisatest"];
 
 		return (
 
@@ -19,14 +18,13 @@ class ProjectCard extends Component{
 	        <div className="card-container">
 	          <div className="card">
 	            <div className="card-header">
+	            	<span className="project-title"> { project.name } </span>
 	            </div>
 	            <div className="card-body">
-	              <span className="project-title"> { project.name } </span>
+	              <span className="project-level"> { project.level} </span>
 	            </div>
+
 	            <div className="card-footer">
-	            </div>
-	            <div className="tags">
-	              { tags }
 	            </div>
 	          </div>
 	        </div>
