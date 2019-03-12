@@ -7,7 +7,7 @@ import Projects from './screens/Projects.js';
 import Project from './screens/Project.js';
 import Curriculums from './screens/Curriculums.js';
 import Curriculum from './screens/Curriculum.js';
-import Article from './screens/Article.js';
+import Article from './screens/Article/Article.js';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
