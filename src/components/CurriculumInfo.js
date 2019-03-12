@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Jumbotron from '../components/Jumbotron';
+import { Jumbotron } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CurriculumMap from '../components/CurriculumMap';
 
@@ -24,7 +24,9 @@ class CurriculumInfo extends Component {
     });
     return (
       <div>
-        <Jumbotron text={ curriculum.name }></Jumbotron>
+        <Jumbotron>
+          { curriculum.name }
+        </Jumbotron>
         <span>
           <div className="hashtags">
             { tags }

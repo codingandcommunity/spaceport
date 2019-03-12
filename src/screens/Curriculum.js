@@ -3,6 +3,7 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PageFrame from '../components/PageFrame';
 import CurriculumInfo from '../components/CurriculumInfo';
+import '../components/Curriculum.css';
 
 class Curriculum extends Component {
 

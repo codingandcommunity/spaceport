@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import PageFrame from '../components/PageFrame';
-import Jumbotron from '../components/Jumbotron';
+import { Jumbotron } from 'react-bootstrap';
+
 import CurriculumCardContainer from '../components/CurriculumCardContainer';
 class Curriculums extends Component {
 
@@ -13,11 +14,6 @@ class Curriculums extends Component {
     }
 
     componentDidMount() {
-      // axios.get(`https://api.github.com/orgs/spaceport-curriculums/repos`, { headers: { Accept: 'application/vnd.github.mercy-preview+json' } })
-      // .then(res => {
-      //   const curriculums = res.data;
-      //   this.setState({ curriculums });
-      // })
       axios.get('/__mocks/curriculums.json')
         .then(res => {
             const curriculums = res.data;
@@ -28,7 +24,9 @@ class Curriculums extends Component {
     render() {
         return (
             <PageFrame>
-                <Jumbotron text="Select from one of our many curriculums to get started!"></Jumbotron>
+                <Jumbotron>
+                  <h1>Select from one of our many curriculums to get started!</h1>
+                </Jumbotron>
                 <CurriculumCardContainer curriculums={this.state.curriculums}></CurriculumCardContainer>
             </PageFrame>
         );
