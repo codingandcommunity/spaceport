@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 import './Navbar.css';
 
@@ -8,8 +8,30 @@ import './Navbar.css';
  */
 class Navbar extends Component {
 
+    constructor() {
+      super();
+      this.state = {
+        toSearch: false,
+        query: ""
+      };
+      this.onEnterPressed = this.onEnterPressed.bind(this);
+    }
+
+    onEnterPressed(event) {
+      if (event.key === "Enter" ) {
+        this.setState({
+          toSearch: true,
+          query: event.target.value
+        });
+      }
+    }
+
     render() {
+        if (this.state.toSearch === true) {
+          return <Redirect to={'/search?q=' + this.state.query}/>
+        }
         return (
+
             <nav className="navbar navbar-expand-lg navbar-dark">
                 <div className="container">
                     <a href="/" className="navbar-brand">
@@ -39,7 +61,7 @@ class Navbar extends Component {
                             <div className="input-group-prepend">
                               <span className="input-group-text bg-white"><i className="fa fa-search"></i></span>
                             </div>
-                            <input type="search" placeholder="Search" className="form-control border-left-0"/>
+                            <input type="search" placeholder="Search" className="form-control border-left-0" onKeyDown={this.onEnterPressed}/>
                           </div>
                         </form>
                     </div>
