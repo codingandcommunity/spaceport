@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import PageFrame from '../components/PageFrame';
 import { Jumbotron } from 'react-bootstrap';
-import CurriculumCardContainer from '../components/CurriculumCardContainer';
+import CurriculumCardContainer from '../components/CurriculumCardContainer/CurriculumCardContainer';
 class Curriculums extends Component {
 
     constructor(props) {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Jumbotron } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import CurriculumMap from '../components/CurriculumMap/CurriculumMap';
+import CurriculumMap from '../CurriculumMap/CurriculumMap';
 
 
 /*

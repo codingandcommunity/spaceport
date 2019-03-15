@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PageFrame from '../components/PageFrame';
-import CurriculumInfo from '../components/CurriculumInfo';
+import CurriculumInfo from '../components/CurriculumInfo/CurriculumInfo';
 import '../components/Curriculum.css';
 
 class Curriculum extends Component {
