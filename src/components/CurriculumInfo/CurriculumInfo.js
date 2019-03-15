@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Jumbotron } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CurriculumMap from '../CurriculumMap/CurriculumMap';
-
+import './CurriculumInfo.css';
 
 /*
  * Display information associated with a Curriculum
@@ -31,7 +31,7 @@ class CurriculumInfo extends Component {
           </a>
         </span>
         <span>
-          <p className="description">
+          <p className="curriculum-info-description">
             {curriculum.description}</p>
         </span>
         <CurriculumMap articles={curriculum.articles} projects={curriculum.projects}/>
