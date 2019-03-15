@@ -21,10 +21,11 @@ class ProjectCard extends Component{
 	            	<span className="project-title"> { project.name } </span>
 	            </div>
 	            <div className="card-body">
-	              <span className="project-level"> { project.level} </span>
+	              <span className="project-description"> { project.description} </span>
 	            </div>
 
 	            <div className="card-footer">
+	            	<span className="project-level"> { project.level} </span>
 	            </div>
 	          </div>
 	        </div>

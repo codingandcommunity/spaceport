@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import ProjectContainer from '../components/ProjectContainer';
 import '../components/Projects.css';
 import axios from 'axios';
+import carousel from '../components/carousel';
 
 
 import PageFrame from '../components/PageFrame';
@@ -13,17 +14,16 @@ class Projects extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			projects: [	
+			projects:[
 			{
-				name: 'example project',
-				level: 'beginner'
-
+				name: 'c++ project',
+				level: 'intermediate',
+				description: 'this is a c++ project'
 			},
 
 			]
 		}
 	}
-
 
 
     render() {
@@ -34,13 +34,9 @@ class Projects extends Component {
 					<h3> Python </h3>
 						<ProjectContainer projects={this.state.projects}></ProjectContainer>
 					<h3> C++ </h3>
-						<Link to= "/projects/:id">
-							<Button bsStyle= "primary">Project Name </Button>
-						</Link>
+						<ProjectContainer projects={this.state.projects}></ProjectContainer>
 					<h3> Java </h3>
-						<Link to= "/projects/:id">
-							<Button bsStyle= "primary">Project Name </Button>
-						</Link>
+						<ProjectContainer projects={this.state.projects}></ProjectContainer>
 				</Col>
             </PageFrame>
         );    
