@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Jumbotron from '../components/Jumbotron';
+import { Jumbotron } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import CurriculumMap from '../components/CurriculumMap';
-
+import CurriculumMap from '../CurriculumMap/CurriculumMap';
+import './CurriculumInfo.css';
 
 /*
  * Display information associated with a Curriculum
@@ -13,18 +13,15 @@ class CurriculumInfo extends Component {
     const { curriculum } = this.props;
     const tags = [];
 
-    // console.log(this.props.curriculm);
-    // if (curriculum.language) {
-    //   curriculum.language.forEach(language => {
-    //     tags.push("#"+language+" ");
-    //   });
-    // }
     curriculum.tags.forEach(tag => {
       tags.push("#"+tag+" ");
     });
+
     return (
       <div>
-        <Jumbotron text={ curriculum.name }></Jumbotron>
+        <Jumbotron className="curriculum-jumbotron">
+          <h1>{ curriculum.name }</h1>
+        </Jumbotron>
         <span>
           <div className="hashtags">
             { tags }
@@ -34,7 +31,7 @@ class CurriculumInfo extends Component {
           </a>
         </span>
         <span>
-          <p className="description">
+          <p className="curriculum-info-description">
             {curriculum.description}</p>
         </span>
         <CurriculumMap articles={curriculum.articles} projects={curriculum.projects}/>

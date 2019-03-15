@@ -1,17 +1,7 @@
-.description {
+.curriculum-info-description {
   font-weight: bold;
   font-size: 20px;
   margin-bottom: 30px;
-}
-.curriculum-map {
-  text-align: left;
-}
-.curriculum-map li {
-  font-size: 2em;
-  color: gray;
-}
-.curriculum-map li span {
-  font-size: 30px;
 }
 .git-link {
   margin-bottom: 15px;

@@ -1,11 +1,11 @@
-.jumbotron {
+.curriculum-jumbotron {
   width: 100%;
   height: 300px;
   margin: 0px;
   background: #00B3FE;
   color: white;
 }
-.jumbotron span {
+.curriculum-jumbotron span {
   vertical-align: middle;
   line-height: 70px;
   font-size: 70px;

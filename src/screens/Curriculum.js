@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PageFrame from '../components/PageFrame';
-import CurriculumInfo from '../components/CurriculumInfo';
+import CurriculumInfo from '../components/CurriculumInfo/CurriculumInfo';
+import '../components/Curriculum.css';
 
 class Curriculum extends Component {
 
@@ -15,14 +16,6 @@ class Curriculum extends Component {
 
   componentDidMount() {
     const { id } = this.props.match.params;
-
-    /*
-    Unused request for gitHub api option
-    axios.get(`https://api.github.com/repositories/${id}`, { headers: { Accept: 'application/vnd.github.mercy-preview+json' } })
-    .then(res => {
-      const curriculum = res.data;
-      this.setState({ curriculum });
-    }) */
 
     axios.get('/__mocks/curriculums.json')
       .then(res => {
