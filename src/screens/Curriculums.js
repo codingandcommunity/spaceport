@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import PageFrame from '../components/PageFrame';
 import { Jumbotron } from 'react-bootstrap';
-
 import CurriculumCardContainer from '../components/CurriculumCardContainer';
 class Curriculums extends Component {
 
@@ -24,7 +23,7 @@ class Curriculums extends Component {
     render() {
         return (
             <PageFrame>
-                <Jumbotron>
+                <Jumbotron className="curriculum-jumbotron">
                   <h1>Select from one of our many curriculums to get started!</h1>
                 </Jumbotron>
                 <CurriculumCardContainer curriculums={this.state.curriculums}></CurriculumCardContainer>

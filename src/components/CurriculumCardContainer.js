@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import CurriculumCard from '../components/CurriculumCard';
+import CurriculumCard from '../components/CurriculumCard/CurriculumCard';
 
 /*
  * Container for curriculum cards.

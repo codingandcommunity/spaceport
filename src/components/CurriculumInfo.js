@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Jumbotron } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import CurriculumMap from '../components/CurriculumMap';
+import CurriculumMap from '../components/CurriculumMap/CurriculumMap';
 
 
 /*
@@ -13,19 +13,14 @@ class CurriculumInfo extends Component {
     const { curriculum } = this.props;
     const tags = [];
 
-    // console.log(this.props.curriculm);
-    // if (curriculum.language) {
-    //   curriculum.language.forEach(language => {
-    //     tags.push("#"+language+" ");
-    //   });
-    // }
     curriculum.tags.forEach(tag => {
       tags.push("#"+tag+" ");
     });
+
     return (
       <div>
-        <Jumbotron>
-          { curriculum.name }
+        <Jumbotron className="curriculum-jumbotron">
+          <h1>{ curriculum.name }</h1>
         </Jumbotron>
         <span>
           <div className="hashtags">
