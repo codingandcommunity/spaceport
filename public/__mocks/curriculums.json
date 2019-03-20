@@ -4,7 +4,7 @@
       "name": "test-curriculum",
       "description": "This is a test. Get started!",
       "respository":"https://github.com/codingandcommunity/test-curriculum",
-      "tags": ["test", "beginner"],
+      "topics": ["test", "beginner"],
       "articles": [
         {
             "id":"1",
@@ -40,7 +40,7 @@
       "name": "intermediate-curriculum",
       "description": "This is an intermediate curriculum. Get started ASAP!",
       "respository":"https://github.com/codingandcommunity/test-curriculum",
-      "tags": ["test", "intermediate"],
+      "topics": ["test", "intermediate"],
       "articles": [
         {
             "id":"1",
@@ -71,7 +71,7 @@
       "name": "harder-curriculum",
       "description": "This is an even harder curriculum. Tread carefully!",
       "respository":"https://github.com/codingandcommunity/test-curriculum",
-      "tags": ["test", "hard"],
+      "topics": ["test", "hard"],
       "articles": [
         {
             "id":"1",

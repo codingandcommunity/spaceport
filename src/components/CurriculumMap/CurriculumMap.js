@@ -17,28 +17,28 @@ class CurriculumMap extends Component {
 
   render() {
     const info = [];
-    this.state.articles.forEach((article) => {
-      info.push(
-        <li key={article.title}>
-          <Link to={{
-              pathname: `${ article.link }`,
-            }}>
-            <span>{ article.title }</span>
-          </Link>
-        </li>
-      );
-    });
-    this.state.projects.forEach((project) => {
-      info.push(
-        <li key={project.title}>
-          <Link to={{
-              pathname: `${ project.link }`,
-            }}>
-            <span>{ project.title }</span>
-          </Link>
-        </li>
-      );
-    });
+    // this.state.articles.forEach((article) => {
+    //   info.push(
+    //     <li key={article.title}>
+    //       <Link to={{
+    //           pathname: `${ article.link }`,
+    //         }}>
+    //         <span>{ article.title }</span>
+    //       </Link>
+    //     </li>
+    //   );
+    // });
+    // this.state.projects.forEach((project) => {
+    //   info.push(
+    //     <li key={project.title}>
+    //       <Link to={{
+    //           pathname: `${ project.link }`,
+    //         }}>
+    //         <span>{ project.title }</span>
+    //       </Link>
+    //     </li>
+    //   );
+    // });
     return (
       <div>
         <ul className="curriculum-map">

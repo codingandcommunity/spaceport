@@ -17,16 +17,23 @@ class Curriculum extends Component {
   componentDidMount() {
     const { id } = this.props.match.params;
 
-    axios.get('/__mocks/curriculums.json')
-      .then(res => {
-          for (let o of res.data) {
-            if (o.id === id) {
-              const curriculum = o;
-              this.setState({ curriculum });
-              break;
-            }
-          }
-      })
+    axios.get(`https://api.github.com/repositories/${id}`, { headers: { Accept: 'application/vnd.github.mercy-preview+json' } })
+    .then(res => {
+      const curriculum = res.data;
+      this.setState({ curriculum });
+    });
+
+    /* For use in mock data version */
+    // axios.get('/__mocks/curriculums.json')
+    //   .then(res => {
+    //       for (let o of res.data) {
+    //         if (o.id === id) {
+    //           const curriculum = o;
+    //           this.setState({ curriculum });
+    //           break;
+    //         }
+    //       }
+    //   })
 
   }
 
