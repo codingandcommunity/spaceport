@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import Home from './screens/Home.js';
+import Articles from './screens/Articles.js';
 import Projects from './screens/Projects.js';
 import Project from './screens/Project.js';
 import Curriculums from './screens/Curriculums.js';
@@ -21,6 +22,7 @@ class App extends Component {
         <Router>
             <Switch>
                 <Route path="/" exact component={Home} />
+                <Route path="/articles" exact component={Articles} />
                 <Route path="/projects" exact component={Projects} />
                 <Route path="/projects/:id" component={Project} />
                 <Route path="/curriculums" exact component={Curriculums} />
