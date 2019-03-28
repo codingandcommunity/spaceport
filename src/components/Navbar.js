@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 import './Navbar.css';
 
@@ -11,27 +11,22 @@ class Navbar extends Component {
     constructor() {
       super();
       this.state = {
-        toSearch: false,
-        query: ""
-      };
-      this.onEnterPressed = this.onEnterPressed.bind(this);
+        searchText: "",
+      }
+      this.onSearchPressed = this.onSearchPressed.bind(this);
+      this.onTextChanged = this.onTextChanged.bind(this);
     }
 
-    onEnterPressed(event) {
-      if (event.key === "Enter" ) {
-        this.setState({
-          toSearch: true,
-          query: event.target.value
-        });
-      }
+    onSearchPressed(event) {
+        this.props.history.push('/search?g=' + this.state.searchText);
+    }
+
+    onTextChanged(event) {
+      this.setState({ searchText: event.target.value });
     }
 
     render() {
-        if (this.state.toSearch === true) {
-          return <Redirect to={'/search?q=' + this.state.query}/>
-        }
         return (
-
             <nav className="navbar navbar-expand-lg navbar-dark">
                 <div className="container">
                     <a href="/" className="navbar-brand">
@@ -58,10 +53,10 @@ class Navbar extends Component {
 
                         <form className="form-inline">
                           <div className="input-group">
-                            <div className="input-group-prepend">
-                              <span className="input-group-text bg-white"><i className="fa fa-search"></i></span>
+                            <input type="search" placeholder="Search" className="form-control border-left-0" onChange={this.onTextChanged} />
+                            <div className="input-group-append">
+                              <button className="btn btn-outline-secondary search-button" type="button" onClick={this.onSearchPressed}><i className="fa fa-search search-icon"></i></button>
                             </div>
-                            <input type="search" placeholder="Search" className="form-control border-left-0" onKeyDown={this.onEnterPressed}/>
                           </div>
                         </form>
                     </div>
@@ -72,4 +67,4 @@ class Navbar extends Component {
     }
 }
 
-export default Navbar;
+export default withRouter(Navbar);
