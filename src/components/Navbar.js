@@ -18,7 +18,8 @@ class Navbar extends Component {
     }
 
     onSearchPressed(event) {
-        this.props.history.push('/search?g=' + this.state.searchText);
+      event.preventDefault();
+      this.props.history.push('/search?g=' + this.state.searchText);
     }
 
     onTextChanged(event) {
@@ -51,7 +52,7 @@ class Navbar extends Component {
                             </li>
                         </ul>
 
-                        <form className="form-inline">
+                        <form className="form-inline" onSubmit={this.onSearchPressed}>
                           <div className="input-group">
                             <input type="search" placeholder="Search" className="form-control border-left-0" onChange={this.onTextChanged} />
                             <div className="input-group-append">
