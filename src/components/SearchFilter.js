@@ -11,6 +11,7 @@ class SearchFilter extends Component {
     const filterStates = ["","",""];
     filterStates[id] = filterState;
     this.setState({filterStates: filterStates});
+    this.props.updateResults(filter);
     console.log(filter);
   }
 

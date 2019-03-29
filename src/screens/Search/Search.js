@@ -12,14 +12,26 @@ class Search extends Component {
         filter: "projects",
         results: [
           {
-            name: "Tic-tac-toe",
+            name: "Project Name",
             src: "",
             alt: "dummy1",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. An tu me de L. Sed ego in hoc resisto; Duo Reges: constructio interrete. Quos quidem tibi studiose et diligenter tractandos magnopere censeo. Tuo vero id quidem, inquam, arbitratu. Quae quidem vel cum periculo est quaerenda vobis.",
-            tags: ["Javascript", "React"],
+            tags: [],
           },
         ],
       }};
+      this.updateResults = this.updateResults.bind(this);
+    }
+
+    updateResults(filter) {
+      fetch('/__mocks/search_' + filter + '.json')
+          .then(res => {
+              return res.json();
+          })
+          .then(searchResult => {
+              this.setState({searchResult});
+              console.log(this.state);
+          });
     }
 
     render() {
@@ -27,7 +39,7 @@ class Search extends Component {
       const searchResultsStyle = {width: "70%", float: "left", margin: "0 5%"};
       return (
           <PageFrame>
-           <SearchFilter style={searchFilterStyle}/>
+           <SearchFilter style={searchFilterStyle} updateResults={this.updateResults}/>
            <SearchResults style={searchResultsStyle} results={this.state.searchResult.results}/>
           </PageFrame>
       );
