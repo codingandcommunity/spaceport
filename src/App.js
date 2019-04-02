@@ -9,8 +9,12 @@ import Curriculums from './screens/Curriculums.js';
 import Curriculum from './screens/Curriculum.js';
 import Article from './screens/Article/Article.js';
 import Search from './screens/Search/Search.js';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const NotFound = () => ( <h2>Not Found</h2> );
+library.add(faSpinner, faGithub);
 
 class App extends Component {
   render() {
