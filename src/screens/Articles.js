@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import PageFrame from '../components/PageFrame';
+import ReactMarkdown from 'react-markdown';
+
 class Articles extends Component {
 
     constructor(props) {
@@ -13,23 +15,23 @@ class Articles extends Component {
     }
 
     componentDidMount() {
-      // TODO: MAKE request for test-articles repo with github api
-      // https://api.github.com/repositories/177862169/contents/test.md
-      axios.get('https://api.github.com/repositories/177862169/contents/test.md')
-        .then(res => {
-            var article = res.data;
-            var content = atob(article.content)
-            this.setState({ article });
-            this.setState({ content });
-            console.log(content);
-        });
 
-      const ignore = ["LICENSE", "README.md"];
-      // axios.get('https://api.github.com/repositories/177862169/contents/')
+      // Files to ignore when displaying articles
+      // const ignore = ["LICENSE", "README.md"];
+      // axios.get('https://api.github.com/repositories/177862169/contents/test.md')
       //   .then(res => {
-      //       var articles = res.data;
-      //       this.setState({ articles });
+      //       var article = res.data;
+      //       var content = atob(article.content);
+      //       this.setState({ article });
+      //       this.setState({ content });
       //   });
+
+      // Request for all articles in the repository
+      axios.get('https://api.github.com/repositories/177862169/contents/')
+        .then(res => {
+            var articles = res.data.filter(i => i.type === 'dir');
+            this.setState({ articles });
+        });
 
       // TODO: display each article's title
       // axios.get('/__mocks/curriculums.json')
@@ -43,30 +45,20 @@ class Articles extends Component {
       return (
         <PageFrame>
           <h1> Articles List </h1>
-            {
-             this.state.articles.map( (article) => {
-                 return (
-                 <li key={article.name}>
-                   <a href={article.url}>
-                     {article.name}
-                   </a>
-                 </li>
-               )
-             })
-            }
-          <ul>
-            {
-             this.state.articles.map( (article) => {
-                 return (
-                 <li key={article.name}>
-                   <a href={article.url}>
-                     {article.name}
-                   </a>
-                 </li>
-               )
-             })
-            }
-          </ul>
+            <ul>
+              {
+               this.state.articles.map( (article) => {
+                   return (
+                   <li key={article.name}>
+                     <a href={article.url}>
+                       {article.name}
+                     </a>
+                   </li>
+                 )
+               })
+              }
+            </ul>
+            <ReactMarkdown source={this.state.content} />
         </PageFrame>
       );
     }
