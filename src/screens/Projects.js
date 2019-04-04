@@ -14,16 +14,19 @@ class Projects extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			projects:[
-			{
-				name: 'c++ project',
-				level: 'intermediate',
-				description: 'this is a c++ project'
-			},
-
-			]
+			projects:[]
 		}
 	}
+
+
+	 componentDidMount() {
+
+      axios.get('/_mocks/projects.json')
+        .then(res => {
+            const projects = res.data;
+            this.setState({ projects });
+        })
+    }
 
 
     render() {
@@ -31,12 +34,7 @@ class Projects extends Component {
             <PageFrame>
                 <h2>Projects</h2>
                 <Col>
-					<h3> Python </h3>
-						<ProjectContainer projects={this.state.projects}></ProjectContainer>
-					<h3> C++ </h3>
-						<ProjectContainer projects={this.state.projects}></ProjectContainer>
-					<h3> Java </h3>
-						<ProjectContainer projects={this.state.projects}></ProjectContainer>
+					<ProjectContainer projects={this.state.projects}></ProjectContainer>
 				</Col>
             </PageFrame>
         );    

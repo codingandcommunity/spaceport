@@ -17,6 +17,9 @@ class ProjectCard extends Component{
 
 	        <div className="card-container">
 	          <div className="card">
+	           <div className="card-language">
+	            	<span className="project-lang"> { project.type } </span>
+	            </div>
 	            <div className="card-header">
 	            	<span className="project-title"> { project.name } </span>
 	            </div>

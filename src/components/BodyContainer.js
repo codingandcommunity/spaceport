@@ -7,9 +7,11 @@ class BodyContainer extends Component {
 	render () {
 
 		const projid = [];
+		console.log(this.props.project);
 
 
-		this.props.projects.forEach((project) => {
+
+		if (this.props.project) this.props.project.forEach((project) => {
 			projid.push(
 				<ProjectBody
 				key={project.id}

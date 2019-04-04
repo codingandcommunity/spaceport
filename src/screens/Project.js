@@ -6,13 +6,12 @@ import axios from 'axios';
 import BodyContainer from '../components/BodyContainer';
 
 import '../components/Project.css';
-import '../components/BodyContainer.js'
 
 
 
 import PageFrame from '../components/PageFrame';
 
-
+console.log('load')
 
 
 class Project extends Component {
@@ -20,36 +19,38 @@ class Project extends Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {projects: {}};
+        console.log('constructor')
+		this.state = {project: null, loading: true};
 	}
 
 
-    render() {
-        return (
-            <PageFrame>
-        
-				<BodyContainer projects={this.state.projects}></BodyContainer>
 
-            </PageFrame>
-        );    
+    componentDidMount() {
+
+        console.log('componentDidMount')
+
+        const{ id } = this.props.match.params;
+
+        axios.get('/_mocks/project.json')
+            .then(res => {
+                const project = res.data;
+                this.setState({ project });
+        }, err=> {
+            console.error(err)
+        })
     }
 
 
+    render() {
 
-    componentDidMount(){
+        console.log(this.state);  
+        return (
+            <PageFrame>
+        
+                <BodyContainer project={this.state.project}></BodyContainer>
 
-    	const{ id } = this.props.match.params;
-
-    	axios.get('/_mocks/project.json')
-    		.then(res => {
-    			for (let i of res.data) {
-    				if (i.id == id){
-    					const projects = i;
-    					this.setState({ projects });
-    					break;
-    				}
-    			}
-    	})
+            </PageFrame>
+        );  
     }
 }
 
