@@ -2,39 +2,40 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import PageFrame from '../components/PageFrame';
-import ReactMarkdown from 'react-markdown';
 
-class Articles extends Component {
+class CurriculumArticles extends Component {
 
     constructor(props) {
       super(props);
+      const { curriculum }  =  this.props.match.params;
       this.state = {
+        curriculum: curriculum,
         articles: [],
-        article: null,
-        content: null
+        article: null
       }
     }
 
     componentDidMount() {
 
-      // Request for all available curriculums that have articles
-      axios.get('https://api.github.com/repositories/177862169/contents/')
+      // Request for all articles in the repository
+      axios.get(`https://api.github.com/repositories/177862169/contents/${this.state.curriculum}`)
         .then(res => {
-            var articles = res.data.filter(i => i.type === 'dir');
+            var articles = res.data.filter(i => i.type === 'file');
             this.setState({ articles });
         });
+
     }
 
     render() {
       return (
         <PageFrame>
-          <h1> Articles List </h1>
+          <h1> Curriculum Articles </h1>
             <ul>
               {
                this.state.articles.map( (article) => {
                    return (
                      <Link key={article.name} to={{
-                         pathname: `articles/${article.name}`,
+                         pathname: `${this.state.curriculum}/${article.name}`,
                        }}>
                        <li key={article.name}>
                            {article.name}
@@ -44,10 +45,9 @@ class Articles extends Component {
                })
               }
             </ul>
-            <ReactMarkdown source={this.state.content} />
         </PageFrame>
       );
     }
 }
 
-export default Articles;
+export default CurriculumArticles;
