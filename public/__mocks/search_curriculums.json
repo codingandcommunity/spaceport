@@ -1,0 +1,19 @@
+{
+  "filter": "curriculums",
+  "results": [
+    {
+      "name": "React",
+      "src": "./dummy1.jpg",
+      "alt": "dummy1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. An tu me de L. Sed ego in hoc resisto; Duo Reges: constructio interrete. Quos quidem tibi studiose et diligenter tractandos magnopere censeo. Tuo vero id quidem, inquam, arbitratu. Quae quidem vel cum periculo est quaerenda vobis.",
+      "tags": ["Javascript", "React"]
+    },
+    {
+      "name": "Python Turtle",
+      "src": "./dummy2.jpg",
+      "alt": "dummy2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. An tu me de L. Sed ego in hoc resisto; Duo Reges: constructio interrete. Quos quidem tibi studiose et diligenter tractandos magnopere censeo. Tuo vero id quidem, inquam, arbitratu. Quae quidem vel cum periculo est quaerenda vobis.",
+      "tags": ["Python","Turtle","Graphics"]
+    }
+  ]
+}

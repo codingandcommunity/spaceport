@@ -1,0 +1,11 @@
+{ 
+ "title": "React Router",
+ "image": "http://example.com/image.jpg",
+ "genre": "search engine optimization", 
+ "keywords": "", 
+ "url": "http://www.example.com",
+ "dateCreated": "2019-01-28",
+ "dateModified": "2019-01-28",
+ "description": "We love to do stuff to help people and stuff",
+ "articleBody": " article content including html elements "
+ }

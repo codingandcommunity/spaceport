@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Jumbotron } from 'react-bootstrap';
+import { Jumbotron } from 'react-bootstrap';
 
 import axios from 'axios';
 
@@ -50,11 +50,11 @@ class Project extends Component {
         
         console.log(this.state.project.title);
         return (
-
+				
             <PageFrame>
                 <BodyContainer project={this.state.project}></BodyContainer>
             </PageFrame>
-        );  
+        );
     }
 }
 
