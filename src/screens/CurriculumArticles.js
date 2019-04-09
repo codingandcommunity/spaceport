@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import PageFrame from '../components/PageFrame';
+import './CurriculumArticles.css';
+
 
 class CurriculumArticles extends Component {
 
@@ -23,14 +25,13 @@ class CurriculumArticles extends Component {
             var articles = res.data.filter(i => i.type === 'file');
             this.setState({ articles });
         });
-
     }
 
     render() {
       return (
         <PageFrame>
           <h1> Curriculum Articles </h1>
-            <ul>
+            <ul className="curriculum-articles">
               {
                this.state.articles.map( (article) => {
                    return (

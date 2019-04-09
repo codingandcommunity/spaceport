@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import PageFrame from '../components/PageFrame';
 import ReactMarkdown from 'react-markdown';
+import './Articles.css';
+
 
 class Articles extends Component {
 
@@ -29,7 +31,7 @@ class Articles extends Component {
       return (
         <PageFrame>
           <h1> Articles List </h1>
-            <ul>
+            <ul className="articles">
               {
                this.state.articles.map( (article) => {
                    return (
