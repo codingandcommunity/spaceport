@@ -3,7 +3,7 @@ import {Jumbotron } from 'react-bootstrap';
 
 import axios from 'axios';
 
-import BodyContainer from '../components/BodyContainer';
+import BodyContainer from '../components/ProjectBody';
 
 import '../components/Project.css';
 
@@ -20,35 +20,39 @@ class Project extends Component {
 	constructor(props) {
 		super(props);
         console.log('constructor')
-		this.state = {project: null, loading: true};
+		this.state = {project: []};
 	}
 
-
+ 
 
     componentDidMount() {
+    const {id} = this.props.match.params;
+    console.log(id);
 
-        console.log('componentDidMount')
-
-        const{ id } = this.props.match.params;
-
-        axios.get('/_mocks/project.json')
-            .then(res => {
-                const project = res.data;
+    axios.get('/_mocks/projects.json')
+      .then(res => {
+          for (let i of res.data) {
+            if(i.id === id){
+                console.log(i.id)
+                const project = i;
                 this.setState({ project });
-        }, err=> {
-            console.error(err)
-        })
-    }
+                console.log(project)
+                break;
+            }
+            
+          }
+      })
+
+  }
 
 
     render() {
-
-        console.log(this.state);  
-        return (
-            <PageFrame>
         
-                <BodyContainer project={this.state.project}></BodyContainer>
+        console.log(this.state.project.title);
+        return (
 
+            <PageFrame>
+                <BodyContainer project={this.state.project}></BodyContainer>
             </PageFrame>
         );  
     }

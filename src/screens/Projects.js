@@ -19,7 +19,7 @@ class Projects extends Component {
 	}
 
 
-	 componentDidMount() {
+	componentDidMount() {
 
       axios.get('/_mocks/projects.json')
         .then(res => {
@@ -30,6 +30,7 @@ class Projects extends Component {
 
 
     render() {
+    	console.log(this.state.projects)
         return (
             <PageFrame>
                 <h2>Projects</h2>

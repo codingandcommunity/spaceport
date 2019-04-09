@@ -7,7 +7,8 @@ class ProjectBody extends Component{
 
 	render(){
 
-		const project = this.props.project;
+		const {project} = this.props;
+		console.log(this.props);
 
 
 		return(
@@ -19,7 +20,7 @@ class ProjectBody extends Component{
 
 					<Jumbotron>
 						<span div className= "project-title"> 
-							<h2> {project.name}  </h2>
+							<h2> {project.title}  </h2>
 						</span>
 					</Jumbotron>
 
