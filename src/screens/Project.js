@@ -1,38 +1,58 @@
 import React, { Component } from 'react';
 import { Jumbotron } from 'react-bootstrap';
 
+import axios from 'axios';
+
+import BodyContainer from '../components/ProjectBody';
+
 import '../components/Project.css';
+
+
 
 import PageFrame from '../components/PageFrame';
 
+console.log('load')
+
+
 class Project extends Component {
 
+
+	constructor(props) {
+		super(props);
+        console.log('constructor')
+		this.state = {project: []};
+	}
+
+ 
+
+    componentDidMount() {
+    const {id} = this.props.match.params;
+    console.log(id);
+
+    axios.get('/_mocks/projects.json')
+      .then(res => {
+          for (let i of res.data) {
+            if(i.id === id){
+                console.log(i.id)
+                const project = i;
+                this.setState({ project });
+                console.log(project)
+                break;
+            }
+            
+          }
+      })
+
+  }
+
+
     render() {
+        
+        console.log(this.state.project.title);
         return (
+				
             <PageFrame>
-                <Jumbotron>
-					<h2>Project Name</h2>
-				</Jumbotron>
-
-
-				<h3> What you will do </h3>
-					<p> The gradual staggers into the crossroad! How does the phoenix cover a lady?
-					An amber acceptance reclaims its fluid. Over a cinema spits the monthly moron.
-					The risk clogs next to the fuzzy exhaust. The ownership farms underneath the deterrent!
-					An aardvark stimulates the obstructed neighborhood. A blackboard coasts with a lived vat.
-					The effort rules behind the proposed effort. When can the leaflet stir beneath our waved leader?
-					The gradual staggers into the crossroad! How does the phoenix cover a lady?
-					An amber acceptance reclaims its fluid. Over a cinema spits the monthly moron.
-					The risk clogs next to the fuzzy exhaust. The ownership farms underneath the deterrent!
-					An aardvark stimulates the obstructed neighborhood. A blackboard coasts with a lived vat.
-					The effort rules behind the proposed effort. When can the leaflet stir beneath our waved leader?
-					</p>
-				<h3> Curriculums </h3>
-
-					<h4> Curriculum 1 </h4>
-					<h4> Curriculum 2 </h4>
-					<h4> Curriculum 3 </h4>
-
+                <BodyContainer project={this.state.project}></BodyContainer>
             </PageFrame>
         );
     }
