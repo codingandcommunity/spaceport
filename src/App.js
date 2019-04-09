@@ -8,6 +8,7 @@ import Project from './screens/Project.js';
 import Curriculums from './screens/Curriculums.js';
 import Curriculum from './screens/Curriculum.js';
 import Article from './screens/Article/Article.js';
+import Search from './screens/Search/Search.js';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -26,6 +27,7 @@ class App extends Component {
                 <Route path="/curriculums" exact component={Curriculums} />
                 <Route path="/curriculums/:id" exact component={Curriculum} />
                 <Route path="/curriculums/:id/:article" component={Article} />
+                <Route path="/search" component={Search} />
                 <Route component={ NotFound } />
             </Switch>
         </Router>
