@@ -28,18 +28,33 @@ class CurriculumArticles extends Component {
     }
 
     render() {
+      var parsed = this.state.curriculum.split("-");
+      var title = "";
+      parsed.forEach(function(word) {
+        word = word.substring(0, 0) + word[0].toUpperCase() + word.substring(0 + 1);
+        title+=word + " ";
+      });
       return (
         <PageFrame>
-          <h1> Curriculum Articles </h1>
+          <h1> Articles for {title} </h1>
             <ul className="curriculum-articles">
               {
                this.state.articles.map( (article) => {
+
+                 // Convert directory name to title format
+                 article.name = article.name.substring(0, article.name.length - 3);
+                 var parsed = article.name.split("-");
+                 var title = "";
+                 parsed.forEach(function(word) {
+                   word = word.substring(0, 0) + word[0].toUpperCase() + word.substring(0 + 1);
+                   title+=word + " ";
+                 });
                    return (
                      <Link key={article.name} to={{
                          pathname: `${this.state.curriculum}/${article.name}`,
                        }}>
                        <li key={article.name}>
-                           {article.name}
+                           {title}
                        </li>
                     </Link>
                  )

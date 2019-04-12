@@ -23,7 +23,7 @@ class Article extends Component {
   componentDidMount() {
 
     // Get the content for a file
-    axios.get(`https://api.github.com/repositories/177862169/contents/${ this.state.curriculum }/${ this.state.title }`)
+    axios.get(`https://api.github.com/repositories/177862169/contents/${ this.state.curriculum }/${ this.state.title }.md`)
       .then(res => {
           var article = res.data;
           var content = atob(article.content);
@@ -33,9 +33,17 @@ class Article extends Component {
   }
 
     render() {
+
+        // Convert article file name to title format
+        var parsed = this.state.title.split("-");
+        var title = "";
+        parsed.forEach(function(word) {
+          word = word.substring(0, 0) + word[0].toUpperCase() + word.substring(0 + 1);
+          title+=word + " ";
+        });
         return (
           <PageFrame>
-            <ArticleHeader title={this.state.title}/>
+            <ArticleHeader title={title}/>
             <ReactMarkdown source={this.state.content} />
           </PageFrame>
 
