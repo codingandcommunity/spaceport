@@ -50,6 +50,9 @@ class Navbar extends Component {
                             <li className="nav-item active">
                                 <Link className="nav-link" to={"/projects"}>Projects</Link>
                             </li>
+                            <li className="nav-item active">
+                                <Link className="nav-link" to={"/articles"}>Articles</Link>
+                            </li>
                         </ul>
 
                         <form className="form-inline" onSubmit={this.onSearchPressed}>
