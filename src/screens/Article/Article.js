@@ -26,7 +26,10 @@ class Article extends Component {
     axios.get(`https://api.github.com/repositories/177862169/contents/${ this.state.curriculum }/${ this.state.title }.md`)
       .then(res => {
           var article = res.data;
-          var content = atob(article.content);
+          var converted = atob(article.content);
+          var list = converted.split("***");
+          var metadeta = list[0];
+          var content = list[1];
           this.setState({ article });
           this.setState({ content });
       });
