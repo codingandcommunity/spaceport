@@ -3,3 +3,11 @@
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
 }
+
+.search-button {
+  background-color: #AEAEAE;
+}
+
+.search-icon {
+  color: white;
+}

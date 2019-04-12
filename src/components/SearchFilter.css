@@ -1,0 +1,20 @@
+.search-filter-group {
+  border: 1px solid #AEAEAE;
+  border-radius: 5px;
+}
+
+.search-filter {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #AEAEAE;
+  margin: auto;
+  text-align: center;
+}
+
+.search-filter:hover {
+  cursor: pointer;
+}
+
+.selected-filter {
+  font-weight: bold;
+}

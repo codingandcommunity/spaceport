@@ -1,0 +1,24 @@
+.search-result {
+  border-bottom: 1px solid #AEAEAE;
+  overflow: hidden;
+}
+
+.search-result-title {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.search-result-description {
+  float: left;
+  width: 70%;
+}
+
+.search-result-tags {
+  float: left;
+  width: 20%;
+  margin: 0 5%;
+}
+
+.search-result-tag {
+  text-align: center;
+}

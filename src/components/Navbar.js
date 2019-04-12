@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 import './Navbar.css';
 
@@ -7,6 +7,24 @@ import './Navbar.css';
  * Navbar to display in the PageFrame when the user is logged in.
  */
 class Navbar extends Component {
+
+    constructor() {
+      super();
+      this.state = {
+        searchText: "",
+      }
+      this.onSearchPressed = this.onSearchPressed.bind(this);
+      this.onTextChanged = this.onTextChanged.bind(this);
+    }
+
+    onSearchPressed(event) {
+      event.preventDefault();
+      this.props.history.push('/search?g=' + this.state.searchText);
+    }
+
+    onTextChanged(event) {
+      this.setState({ searchText: event.target.value });
+    }
 
     render() {
         return (
@@ -36,11 +54,21 @@ class Navbar extends Component {
                                 <Link className="nav-link" to={"/articles"}>Articles</Link>
                             </li>
                         </ul>
+
+                        <form className="form-inline" onSubmit={this.onSearchPressed}>
+                          <div className="input-group">
+                            <input type="search" placeholder="Search" className="form-control border-left-0" onChange={this.onTextChanged} />
+                            <div className="input-group-append">
+                              <button className="btn btn-outline-secondary search-button" type="button" onClick={this.onSearchPressed}><i className="fa fa-search search-icon"></i></button>
+                            </div>
+                          </div>
+                        </form>
                     </div>
+
                 </div>
             </nav>
         );
     }
 }
 
-export default Navbar;
+export default withRouter(Navbar);
