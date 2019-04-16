@@ -46,7 +46,6 @@ class Article extends Component {
         });
         return (
           <PageFrame>
-            <ArticleHeader title={title}/>
             <ReactMarkdown source={this.state.content} />
           </PageFrame>
 
