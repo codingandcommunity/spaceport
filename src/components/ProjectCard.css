@@ -2,7 +2,19 @@
 
 	margin-bottom: 3em;
 	text-align: right;
-	color: #FF6922;
+	color: #18B1FF;
 
 	
+}
+.card{
+	background: #C4C4C4;
+	border-radius: 0px;
+	border: none;
+	width: 325px;
+	margin: 20px;
+	float: left;
+}
+
+.card-container{
+	display: block
 }

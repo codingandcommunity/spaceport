@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {Button, Col} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import ProjectContainer from '../components/ProjectContainer';
-import '../components/Projects.css';
 import axios from 'axios';
 import carousel from '../components/carousel';
 

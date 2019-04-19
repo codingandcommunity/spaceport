@@ -1,0 +1,26 @@
+h1 {
+	color: #FFFFFF;
+	text-align: center;
+}
+
+h3{
+	text-align: left;
+}
+
+.col-sm{
+
+	padding-bottom: 20%;
+}
+
+h4 {
+	font-size: 16pt;
+	font-weight: bold;
+
+}
+
+.jumbotron{
+	margin-bottom: 4em;
+	background-size: contain;
+	background-color: #18B1FF;
+}
+
