@@ -34,6 +34,9 @@ class ProjectBody extends Component{
 					<h3> Curriculums </h3>
 					<span div className= "curric"> 
 						<h4> {project.curriculum1}  </h4> 
+						<h4> {project.curriculum2}  </h4> 
+						<h4> {project.curriculum3}  </h4> 
+						<h4> {project.curriculum4}  </h4> 
 					</span>
 				</div>
 			</div>
