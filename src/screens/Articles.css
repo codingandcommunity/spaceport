@@ -1,0 +1,7 @@
+.articles {
+  list-style-type: none;
+}
+.articles li {
+  font-size: 50px;
+  color:  #18B1FF;
+}
