@@ -1,0 +1,48 @@
+.home-frame {
+  overflow: scroll;
+}
+
+.home-background {
+  width: 100%;
+}
+
+.main-paragraph {
+  width: 90%;
+  margin: 5% auto;
+}
+
+.paragraph-container {
+  display: flex;
+  width: 100%;
+}
+
+.tri-paragraph {
+  height: 100%;
+  margin: 2% 2%;
+}
+
+.paragraph {
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.explore-div {
+  display: flex;
+  width: fit-content;
+  white-space: nowrap;
+  margin: 0 auto;
+}
+
+.explore-icon {
+  display: inline-block;
+  margin: auto 2%;
+  color: #007bff;
+}
+
+@media only screen and (max-width: 425px) {
+  .paragraph-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+  }
+}
