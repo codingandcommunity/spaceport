@@ -11,6 +11,7 @@ import Curriculum from './screens/Curriculum.js';
 import Article from './screens/Article/Article.js';
 import CurriculumArticles from './screens/CurriculumArticles.js';
 import Search from './screens/Search/Search.js';
+import Downloads from './screens/Downloads.js';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -24,6 +25,7 @@ class App extends Component {
         <Router>
             <Switch>
                 <Route path="/" exact component={Home} />
+                <Route path="/downloads" exact component={Downloads} />
                 <Route path="/articles" exact component={Articles} />
                 <Route path="/articles/:curriculum" exact component={CurriculumArticles} />
                 <Route path="/articles/:curriculum/:article" exact component={Article} />

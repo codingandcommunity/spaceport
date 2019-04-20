@@ -1,20 +1,34 @@
 .jumbotron {
 	margin-bottom: 4em;
-	border-style:solid;
 	background-size: contain;
 	padding-top: 20%;
-	padding-bottom: 20%;
+	padding-bottom: 15%;
+	background-color: #18B1FF;
 }
 
 h2{
 	text-align: center;
-	color: #18B1FF;
+	color: #FFFFFF;
+	font-size: 3em;
+	font-weight: bold;
+
 }
 
-p{
-	text-align: justify;
+.description{
+}
+
+h3{
+	color: #000000;
+	font-weight: bold;
+	font-size: 140%;
+	padding-top: 2.5%;
+
 }
 
 h4{
-	color: #FF6922;
+	font-size: 1em;
+	
+}
+.body{
+	padding-bottom: 50px;
 }
