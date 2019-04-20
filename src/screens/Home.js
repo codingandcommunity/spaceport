@@ -10,7 +10,7 @@ class Home extends Component {
                 <img className="home-background" src="./home-background.jpg" alt="kids learning"/>
 
                 <div className="main-paragraph">
-                  <h3>Project - Based Learning</h3>
+                  <h3 className="paragraph-header">Project - Based Learning</h3>
                   <p className="paragraph">Kids will learn how to effectively code through guided projects that teach the essential fundamentals and the problem solving mentality.</p>
                 </div>
 
